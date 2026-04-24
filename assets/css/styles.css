@@ -232,8 +232,11 @@ p.lead { font-size: var(--t-lg); color: var(--c-grafito); line-height: 1.5; font
     padding: 0.65rem 1.1rem;
     font-size: 0.85rem;
     margin-left: var(--s-2);
+    color: #FFFFFF;
 }
+.nav__menu .nav__cta:hover { color: var(--c-yellow); }
 .nav__menu .nav__cta:hover::after { display: none; }
+.nav__menu .nav__cta::after { display: none; }
 .nav__menu a::after {
     content: ""; position: absolute; left: 0; right: 0; bottom: -2px;
     height: 2px; background: var(--c-yellow);
