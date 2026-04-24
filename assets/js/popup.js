@@ -2,7 +2,7 @@
 (function () {
     'use strict';
 
-    const POPUP_DELAY_MS = 15000;
+    const POPUP_DELAY_MS = 13000;
     const STICKY_DELAY_MS = 4000;
 
     /* ---------- Pop-up de prácticas ---------- */
