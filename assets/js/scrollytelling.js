@@ -136,25 +136,51 @@
         });
     }
 
-    // Imagen hero: entrada con clip-path desde el centro + rotación + 3D
-    const heroImg = document.querySelector('.hero__image');
-    if (heroImg) {
-        gsap.fromTo(heroImg,
-            { clipPath: 'inset(50% 50% 50% 50% round 200px)', scale: 0.6, rotate: 8 },
-            { clipPath: 'inset(0% 0% 0% 0% round 24px)', scale: 1, rotate: 1.5,
-              duration: 1.6, ease: 'expo.out', delay: 0.4 }
+    // Cartel del hero (derecha) + stickers
+    const heroPoster = document.querySelector('.hero__poster');
+    if (heroPoster) {
+        gsap.fromTo(heroPoster,
+            { clipPath: 'inset(50% 50% 50% 50% round 160px)', scale: 0.6, rotate: 10 },
+            { clipPath: 'inset(0% 0% 0% 0% round 24px)', scale: 1, rotate: -1.5,
+              duration: 1.4, ease: 'expo.out', delay: 0.4 }
         );
-        // Parallax al scrollear con rotación leve
-        gsap.to(heroImg.querySelector('img'), {
-            yPercent: -15, scale: 1.12, rotate: -1,
+        gsap.to(heroPoster.querySelector('img'), {
+            yPercent: -6, scale: 1.06,
             ease: 'none',
             scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom top', scrub: 1 }
         });
-        // El bloque entero se desvanece con rotación al bajar
-        gsap.to(heroImg, {
-            yPercent: -10, rotate: -2, opacity: 0.5,
-            ease: 'none',
-            scrollTrigger: { trigger: '.hero', start: 'center top', end: 'bottom top', scrub: 1 }
+    }
+
+    // Sticker amarillo y tape entran con rebote en diagonales opuestas
+    gsap.from('.hero__sticker', {
+        scale: 0, rotate: 15, y: 80, opacity: 0,
+        duration: 0.9, ease: 'back.out(1.8)', delay: 1.3
+    });
+    gsap.from('.hero__tape-alt', {
+        scale: 0, rotate: -20, y: -60, opacity: 0,
+        duration: 0.9, ease: 'back.out(1.8)', delay: 1.5
+    });
+    gsap.from('.hero__poster-tag', {
+        x: -40, opacity: 0, rotate: 0,
+        duration: 0.8, ease: 'expo.out', delay: 1.7
+    });
+
+    // Foto panorámica debajo del hero
+    const heroPanorama = document.querySelector('.hero__panorama');
+    if (heroPanorama) {
+        gsap.fromTo(heroPanorama,
+            { clipPath: 'inset(0 50% 0 50% round 24px)' },
+            { clipPath: 'inset(0 0 0 0 round 24px)',
+              duration: 1.4, ease: 'power4.out', immediateRender: false,
+              scrollTrigger: { trigger: heroPanorama, start: 'top 85%', toggleActions: 'play none none none' } }
+        );
+        gsap.to(heroPanorama.querySelector('img'), {
+            yPercent: -8, scale: 1.06, ease: 'none',
+            scrollTrigger: { trigger: heroPanorama, start: 'top bottom', end: 'bottom top', scrub: 1.2 }
+        });
+        gsap.from(heroPanorama.querySelector('.hero__panorama-cap'), {
+            y: 30, opacity: 0, duration: 0.8, ease: 'expo.out', delay: 0.6,
+            scrollTrigger: { trigger: heroPanorama, start: 'top 80%' }
         });
     }
 
@@ -164,15 +190,19 @@
         scrollTrigger: { trigger: '.hero', start: 'center top', end: 'bottom top', scrub: 1 }
     });
 
-    // Badge y tape (pegatinas) con bounce en diferentes direcciones
-    gsap.from('.hero__badge', {
-        x: -100, y: 50, rotate: -30, scale: 0, opacity: 0,
-        duration: 1, ease: 'back.out(1.8)', delay: 1.8
-    });
-    gsap.from('.hero__tape', {
-        x: 100, y: -50, rotate: 30, scale: 0, opacity: 0,
-        duration: 1, ease: 'back.out(1.8)', delay: 2
-    });
+    // Badge y tape legacy (voluntariado)
+    if (document.querySelector('.hero__badge')) {
+        gsap.from('.hero__badge', {
+            x: -100, y: 50, rotate: -30, scale: 0, opacity: 0,
+            duration: 1, ease: 'back.out(1.8)', delay: 1.8
+        });
+    }
+    if (document.querySelector('.hero__tape')) {
+        gsap.from('.hero__tape', {
+            x: 100, y: -50, rotate: 30, scale: 0, opacity: 0,
+            duration: 1, ease: 'back.out(1.8)', delay: 2
+        });
+    }
     gsap.from('.hero__star', {
         scale: 0, rotate: 180, opacity: 0,
         duration: 1.2, ease: 'elastic.out(1, 0.5)', delay: 2.2

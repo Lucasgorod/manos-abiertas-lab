@@ -285,44 +285,136 @@ p.lead { font-size: var(--t-lg); color: var(--c-grafito); line-height: 1.5; font
 }
 .hero__grid {
     display: grid;
-    grid-template-columns: 1fr;
-    gap: clamp(var(--s-10), 5vw, var(--s-16));
-    align-items: start;
+    grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
+    gap: clamp(var(--s-8), 5vw, var(--s-16));
+    align-items: center;
 }
-.hero__copy { max-width: 880px; }
+.hero__copy { max-width: 640px; }
 .hero__title { margin-top: var(--s-5); margin-bottom: var(--s-8); }
-.hero__lead { margin-bottom: var(--s-10); max-width: 640px; }
+.hero__lead { margin-bottom: var(--s-10); max-width: 560px; }
 .hero__actions { display: flex; flex-wrap: wrap; gap: var(--s-4); align-items: center; }
 
 .hero__meta {
     margin-top: var(--s-12);
     display: flex; gap: var(--s-8); flex-wrap: wrap;
     padding-top: var(--s-6); border-top: 1px solid var(--c-linea);
-    max-width: 640px;
+    max-width: 560px;
 }
 .hero__meta-item .num { font-family: var(--f-display); font-size: 2rem; font-weight: 400; color: var(--c-navy); letter-spacing: -0.02em; display: block; line-height: 1; }
 .hero__meta-item .lab { font-size: 0.78rem; color: var(--c-grafito-soft); letter-spacing: .1em; text-transform: uppercase; margin-top: 4px; display: block; }
 
-.hero__image {
+/* --- Visual derecho del hero: cartel + sticker + tape --- */
+.hero__visual {
     position: relative;
-    aspect-ratio: 16/7;
+    aspect-ratio: 4/5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--s-4);
+}
+.hero__poster {
+    position: relative;
+    width: 100%; height: 100%;
+    margin: 0;
     border-radius: var(--r-l);
     overflow: hidden;
     box-shadow: var(--sh-l);
-    transform: rotate(0.5deg);
-    width: 100%;
-    max-width: 1200px;
-    margin-inline: auto;
+    transform: rotate(-1.5deg);
+    transition: transform .6s var(--ease);
+    background: var(--c-crema-deep, #F3F5F9);
+    isolation: isolate;
 }
-.hero__image img {
+.hero__poster img {
     width: 100%; height: 100%;
     object-fit: cover;
-    object-position: center 40%;
+    object-position: center center;
+}
+.hero__poster::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: linear-gradient(180deg, transparent 60%, rgba(15,44,82,.08) 100%);
+    pointer-events: none;
+}
+.hero__poster:hover { transform: rotate(-0.5deg) scale(1.02); }
+.hero__poster-tag {
+    position: absolute; left: var(--s-4); top: var(--s-4);
+    background: var(--c-navy);
+    color: var(--c-yellow);
+    padding: 10px 14px;
+    border-radius: var(--r-m);
+    font-family: var(--f-display);
+    font-size: 0.92rem;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -.01em;
+    box-shadow: var(--sh-m);
+    transform: rotate(2deg);
+}
+
+.hero__sticker {
+    position: absolute;
+    bottom: -8px; left: -16px;
+    background: var(--c-yellow);
+    color: var(--c-navy-dark);
+    padding: 12px 16px;
+    border-radius: var(--r-m);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: .03em;
+    line-height: 1.2;
+    display: flex; align-items: center; gap: var(--s-2);
+    box-shadow: 0 6px 20px -4px rgba(244,196,48,.4), var(--sh-m);
+    transform: rotate(-4deg);
+    z-index: 2;
+}
+.hero__sticker svg { flex-shrink: 0; }
+
+.hero__tape-alt {
+    position: absolute;
+    top: -14px; right: 10px;
+    background: var(--c-navy);
+    color: var(--c-yellow);
+    padding: 6px 16px;
+    font-size: .66rem;
+    letter-spacing: .28em;
+    text-transform: uppercase;
+    font-weight: 700;
+    transform: rotate(4deg);
+    box-shadow: var(--sh-s);
+    z-index: 2;
+}
+
+/* --- Foto grupal panorámica debajo del hero --- */
+.hero__panorama {
+    margin-top: clamp(var(--s-10), 6vw, var(--s-16));
+    border-radius: var(--r-l);
+    overflow: hidden;
+    position: relative;
+    box-shadow: var(--sh-l);
+    aspect-ratio: 21/7;
+    max-height: 520px;
+}
+.hero__panorama img {
+    width: 100%; height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+}
+.hero__panorama-cap {
+    position: absolute; bottom: var(--s-4); left: var(--s-5);
+    background: rgba(15,44,82,.88);
+    backdrop-filter: blur(8px);
+    color: var(--c-crema);
+    padding: 8px 14px;
+    border-radius: var(--r-pill);
+    font-size: .75rem;
+    letter-spacing: .04em;
+    border-left: 3px solid var(--c-yellow);
 }
 .hero__image::after {
     content: ""; position: absolute; inset: 0;
     background: linear-gradient(180deg, transparent 50%, rgba(38,38,38,.15) 100%);
 }
+/* Legacy badges (mantenidos para voluntariado) */
 .hero__badge {
     position: absolute; bottom: 24px; left: 24px;
     background: var(--c-yellow); color: var(--c-navy-dark);
@@ -1091,7 +1183,12 @@ html.lenis.lenis-smooth iframe { pointer-events: none; }
         background: var(--c-cremaDeep, #F3F5F9);
         color: var(--c-navy);
     }
-    .hero__grid { gap: var(--s-8); }
+    .hero__grid {
+        grid-template-columns: 1fr;
+        gap: var(--s-10);
+    }
+    .hero__visual { aspect-ratio: 4/4.5; max-width: 520px; margin-inline: auto; width: 100%; }
+    .hero__panorama { aspect-ratio: 16/9; margin-top: var(--s-10); }
     .hero__image { aspect-ratio: 4/3; }
     .hero__image img { object-position: center 45%; }
     .projects__head, .blog__head, .tasks__head { grid-template-columns: 1fr; gap: var(--s-6); }
