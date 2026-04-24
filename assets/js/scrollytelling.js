@@ -89,25 +89,139 @@
         return chars;
     }
 
-    /* ================= HERO · ENTRADA CINEMATOGRÁFICA =================
-       Nota: sin gsap.set(autoAlpha:0) previo — cada gsap.from captura el
-       estado natural del elemento como target, así los elementos quedan
-       siempre visibles al final de su animación. */
+    /* ================= GAMIFICACIÓN · Selector de disciplina =================
+       Auto-rotación cada 3s hasta que el usuario haga click en un chip.
+       El verbo del titular se anima morfeando al cambiar. */
+    (function initDisciplinePicker() {
+        const chips = gsap.utils.toArray('.hero__chip');
+        const verbEl = document.querySelector('.hero__verb');
+        const statusWrap = document.querySelector('.hero__picker-status');
+        const statusText = document.querySelector('.hero__picker-text');
+        if (!chips.length || !verbEl) return;
+
+        const ROTATE_MS = 3000;
+        let idx = 0;
+        let userLocked = false;
+        let timer = null;
+
+        function setActive(newIdx, fromClick = false) {
+            if (newIdx === idx && !fromClick) return;
+            idx = newIdx;
+            const chip = chips[idx];
+            const newVerb = chip.dataset.verb;
+            const newDiscipline = chip.dataset.discipline;
+
+            // Estado visual de chips
+            chips.forEach((c, i) => {
+                const active = i === idx;
+                c.classList.toggle('is-active', active);
+                c.setAttribute('aria-selected', active ? 'true' : 'false');
+            });
+
+            // Morfología del verbo: salida hacia arriba + entrada desde abajo con blur
+            gsap.timeline()
+                .to(verbEl, {
+                    yPercent: -55, opacity: 0, filter: 'blur(6px)',
+                    duration: 0.22, ease: 'power2.in'
+                })
+                .call(() => { verbEl.textContent = newVerb; })
+                .fromTo(verbEl,
+                    { yPercent: 55, opacity: 0, filter: 'blur(6px)' },
+                    { yPercent: 0, opacity: 1, filter: 'blur(0px)', duration: 0.45, ease: 'expo.out' }
+                );
+
+            if (fromClick && !userLocked) {
+                userLocked = true;
+                clearInterval(timer);
+                if (statusWrap) statusWrap.classList.add('is-locked');
+                if (statusText) statusText.textContent = `Has elegido ${newDiscipline}. Apúntate cuando estés.`;
+            }
+        }
+
+        // Auto-rotación
+        timer = setInterval(() => {
+            if (userLocked) return;
+            setActive((idx + 1) % chips.length);
+        }, ROTATE_MS);
+
+        // Click handlers
+        chips.forEach((chip, i) => {
+            chip.addEventListener('click', () => setActive(i, true));
+            chip.addEventListener('keydown', (e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                    e.preventDefault();
+                    setActive(i, true);
+                }
+                // Flechas para navegación por teclado
+                if (e.key === 'ArrowRight') { e.preventDefault(); chips[(i + 1) % chips.length].focus(); }
+                if (e.key === 'ArrowLeft') { e.preventDefault(); chips[(i - 1 + chips.length) % chips.length].focus(); }
+            });
+        });
+
+        // Pausar en hover (cortesía sin bloquear la interacción)
+        const picker = document.querySelector('.hero__picker');
+        if (picker) {
+            picker.addEventListener('mouseenter', () => { if (!userLocked) clearInterval(timer); });
+            picker.addEventListener('mouseleave', () => {
+                if (!userLocked) {
+                    timer = setInterval(() => {
+                        if (userLocked) return;
+                        setActive((idx + 1) % chips.length);
+                    }, ROTATE_MS);
+                }
+            });
+        }
+    })();
+
+    /* ================= HERO · ENTRADA CINEMATOGRÁFICA ================= */
     const heroTitle = document.querySelector('.hero__title');
     if (heroTitle) {
-        const chars = splitChars(heroTitle);
+        // Solo animamos las partes estáticas (no el verbo dinámico)
+        const staticParts = heroTitle.querySelectorAll('.hero__title-part');
+        staticParts.forEach(part => splitChars(part));
+        const chars = heroTitle.querySelectorAll('.hero__title-part .char');
         gsap.from(chars, {
             opacity: 0,
             yPercent: 80,
-            rotate: () => gsap.utils.random(-15, 15),
-            filter: 'blur(12px)',
-            scale: 0.7,
-            duration: 1.2,
+            rotate: () => gsap.utils.random(-10, 10),
+            filter: 'blur(8px)',
+            scale: 0.8,
+            duration: 1.0,
             ease: 'expo.out',
-            stagger: { each: 0.02, from: 'random' },
-            delay: 0.15
+            stagger: { each: 0.015, from: 'random' },
+            delay: 0.2
         });
+        // El verbo entra con fade + scale subtle
+        const verbWrap = heroTitle.querySelector('.hero__verb-wrap');
+        if (verbWrap) {
+            gsap.from(verbWrap, {
+                opacity: 0, yPercent: 30, scale: 0.9,
+                duration: 0.8, ease: 'expo.out', delay: 0.6
+            });
+        }
     }
+
+    // Picker de disciplinas entra al final de la secuencia
+    gsap.from('.hero__picker', {
+        y: 40, opacity: 0, duration: 0.9, ease: 'expo.out', delay: 1.3
+    });
+    gsap.from('.hero__curator', {
+        scaleX: 0, opacity: 0, duration: 0.9, ease: 'expo.out',
+        transformOrigin: 'left center', delay: 0.1
+    });
+
+    // Sala heads entran con línea dibujándose
+    gsap.utils.toArray('.sala-head').forEach(head => {
+        const num = head.querySelector('.sala-num');
+        const div = head.querySelector('.sala-div');
+        const label = head.querySelector('.sala-label');
+        const tl = gsap.timeline({
+            scrollTrigger: { trigger: head, start: 'top 85%', toggleActions: 'play none none reverse' }
+        });
+        if (num) tl.from(num, { x: -30, opacity: 0, duration: 0.7, ease: 'expo.out' }, 0);
+        if (div) tl.from(div, { scaleX: 0, transformOrigin: 'left center', duration: 0.9, ease: 'expo.out' }, 0.2);
+        if (label) tl.from(label, { x: 20, opacity: 0, duration: 0.6, ease: 'expo.out' }, 0.4);
+    });
 
     // Eyebrow cae desde arriba con bounce
     gsap.from('.hero .eyebrow', {

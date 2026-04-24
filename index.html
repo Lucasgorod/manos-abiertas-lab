@@ -57,7 +57,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/styles.css?v=lasalle16" />
+<link rel="stylesheet" href="assets/css/styles.css?v=moma1" />
 </head>
 <body>
 
@@ -96,9 +96,58 @@
         <div class="hero__grid">
             <div class="hero__copy" data-reveal>
                 <span class="hero__star" aria-hidden="true"></span>
-                <span class="eyebrow">Centro socioeducativo · La Salle</span>
-                <h1 class="hero__title">Tu cámara puede cambiar<br>un <em>barrio entero</em>.</h1>
-                <p class="lead hero__lead">Somos una ONG de Sevilla que desde 1992 educa a niños y jóvenes en el Polígono Norte. Buscamos estudiantes de comunicación que quieran contar esta historia con nosotras.</p>
+                <div class="hero__curator">
+                    <span class="hero__curator-kicker">Exposición abierta</span>
+                    <span class="hero__curator-sep">·</span>
+                    <span class="hero__curator-meta">Curso 25/26 · Polígono Norte, Sevilla</span>
+                </div>
+                <h1 class="hero__title">
+                    <span class="hero__title-part">Tu</span>
+                    <span class="hero__verb-wrap"><span class="hero__verb" data-default="cámara">cámara</span></span>
+                    <span class="hero__title-part">puede cambiar</span><br>
+                    <span class="hero__title-part">un <em>barrio entero</em>.</span>
+                </h1>
+
+                <fieldset class="hero__picker" aria-label="Elige tu disciplina">
+                    <legend class="hero__picker-legend">
+                        <span class="hero__picker-num">01.</span>
+                        Elige tu verbo
+                        <span class="hero__picker-hint"> — el titular cambiará</span>
+                    </legend>
+                    <div class="hero__picker-list" role="tablist">
+                        <button type="button" class="hero__chip is-active" role="tab" aria-selected="true"
+                                data-verb="cámara" data-discipline="Fotografía">
+                            <span class="hero__chip-n">I</span>
+                            <span class="hero__chip-l">Fotografía</span>
+                        </button>
+                        <button type="button" class="hero__chip" role="tab" aria-selected="false"
+                                data-verb="reel" data-discipline="Vídeo">
+                            <span class="hero__chip-n">II</span>
+                            <span class="hero__chip-l">Vídeo</span>
+                        </button>
+                        <button type="button" class="hero__chip" role="tab" aria-selected="false"
+                                data-verb="post" data-discipline="Redes">
+                            <span class="hero__chip-n">III</span>
+                            <span class="hero__chip-l">Redes</span>
+                        </button>
+                        <button type="button" class="hero__chip" role="tab" aria-selected="false"
+                                data-verb="diseño" data-discipline="Diseño">
+                            <span class="hero__chip-n">IV</span>
+                            <span class="hero__chip-l">Diseño</span>
+                        </button>
+                        <button type="button" class="hero__chip" role="tab" aria-selected="false"
+                                data-verb="crónica" data-discipline="Redacción">
+                            <span class="hero__chip-n">V</span>
+                            <span class="hero__chip-l">Redacción</span>
+                        </button>
+                    </div>
+                    <div class="hero__picker-status" aria-live="polite">
+                        <span class="hero__picker-dot" aria-hidden="true"></span>
+                        <span class="hero__picker-text">Rotación automática · haz click para quedarte con una</span>
+                    </div>
+                </fieldset>
+
+                <p class="lead hero__lead">ONG socioeducativa de Sevilla, en activo desde 1992. Esta temporada abrimos cinco salas de trabajo para estudiantes de comunicación: elige la tuya.</p>
                 <div class="hero__actions">
                     <a href="#" class="btn btn--primary btn--lg" data-popup-open>
                         <span class="dot"></span>
@@ -140,9 +189,14 @@
 <!-- PROYECTOS -->
 <section class="section projects" id="proyectos">
     <div class="container">
+        <div class="sala-head">
+            <span class="sala-num">Sala I</span>
+            <span class="sala-div"></span>
+            <span class="sala-label">Qué hacemos</span>
+        </div>
         <div class="projects__head" data-reveal>
             <div>
-                <span class="eyebrow">Qué hacemos</span>
+                <span class="eyebrow">Programas socioeducativos en activo</span>
                 <h2>Cuatro proyectos,<br>una misma <em>idea fuerza</em>.</h2>
             </div>
             <p class="lead">Intervenimos donde la escuela no llega. Cada programa nace de una necesidad real detectada por las familias del barrio y acompaña a los menores en procesos concretos: convivencia, aprendizaje, verano y participación.</p>
@@ -173,8 +227,13 @@
 <!-- HISTORIAS DEL BARRIO -->
 <section class="section" id="historias">
     <div class="container">
+        <div class="sala-head">
+            <span class="sala-num">Sala II</span>
+            <span class="sala-div"></span>
+            <span class="sala-label">Historias del barrio</span>
+        </div>
         <div class="stories__head" data-reveal>
-            <span class="eyebrow">Historias del barrio</span>
+            <span class="eyebrow">Testimonios — voluntariado comunicación</span>
             <h2>Las prácticas que les <em>cambiaron</em> la mirada.</h2>
             <p class="lead" style="margin-top: var(--s-6);">Tres estudiantes que llegaron buscando créditos y se fueron con un barrio entero en la cabeza.</p>
         </div>
@@ -239,8 +298,13 @@
 <!-- CÓMO FUNCIONA (3 pasos – embudo de onboarding) -->
 <section class="section section--tight">
     <div class="container">
+        <div class="sala-head sala-head--dark">
+            <span class="sala-num">Sala III</span>
+            <span class="sala-div"></span>
+            <span class="sala-label">Cómo unirte</span>
+        </div>
         <div class="how" data-reveal>
-            <span class="eyebrow">En tres pasos</span>
+            <span class="eyebrow">Proceso de incorporación</span>
             <h2>Así funciona si decides <em>unirte</em>.</h2>
             <div class="how__steps">
                 <div class="step">
@@ -266,9 +330,14 @@
 <!-- IMPACTO -->
 <section class="section section--tight impact" id="transparencia">
     <div class="container">
+        <div class="sala-head">
+            <span class="sala-num">Sala IV</span>
+            <span class="sala-div"></span>
+            <span class="sala-label">Transparencia</span>
+        </div>
         <div class="projects__head" data-reveal style="margin-bottom: var(--s-10);">
             <div>
-                <span class="eyebrow">Transparencia 2024</span>
+                <span class="eyebrow">Memoria 2024 · datos auditados</span>
                 <h2>Números que <em>importan</em>.</h2>
             </div>
             <p>Datos públicos de nuestra memoria anual. Auditados por la Red La Salle Andalucía y revisados por la Junta Directiva.</p>
@@ -334,9 +403,14 @@
 <!-- BLOG -->
 <section class="section">
     <div class="container">
+        <div class="sala-head">
+            <span class="sala-num">Sala V</span>
+            <span class="sala-div"></span>
+            <span class="sala-label">Diario</span>
+        </div>
         <div class="blog__head" data-reveal>
             <div>
-                <span class="eyebrow">Últimas del barrio</span>
+                <span class="eyebrow">Crónicas del Polígono Norte</span>
                 <h2>Diario de <em>este curso</em>.</h2>
             </div>
             <p>Crónicas, reflexiones y noticias que cuentan lo que pasa entre las paredes de la Plaza Río de Janeiro y Meléndez Valdés.</p>
@@ -533,7 +607,7 @@
 <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14/dist/gsap.min.js" defer></script>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.14/dist/ScrollTrigger.min.js" defer></script>
-<script src="assets/js/scrollytelling.js?v=lasalle15" defer></script>
+<script src="assets/js/scrollytelling.js?v=moma1" defer></script>
 <script src="assets/js/popup.js?v=lasalle15" defer></script>
 </body>
 </html>
