@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<meta name="theme-color" content="#0F2C52" />
+<title>¿Te encaja Manos Abiertas con Norte? · Quiz de 1 minuto</title>
+<meta name="description" content="Cinco preguntas rápidas para descubrir si el voluntariado de comunicación encaja con tu perfil. Manos Abiertas con Norte." />
+<meta name="robots" content="noindex" />
+
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo-small.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo-small.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/quiz.css?v=1" />
+</head>
+<body>
+
+<div class="quiz" id="quiz">
+
+    <!-- HEADER · brand + progreso -->
+    <header class="quiz__nav">
+        <a class="quiz__brand" href="index.html" aria-label="Manos Abiertas con Norte">
+            <span class="quiz__brand-mark">
+                <img src="assets/img/logo-manos-abiertas.png" alt="" />
+            </span>
+            <span class="quiz__brand-text">
+                <span class="quiz__brand-title">Manos Abiertas<em> con Norte</em></span>
+                <small class="quiz__brand-lab"><span class="quiz__blob"></span> Lab de Comunicación</small>
+            </span>
+        </a>
+        <button class="quiz__skip" id="quiz-skip" aria-label="Saltar al sitio">
+            Saltar
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+    </header>
+
+    <div class="quiz__progress" aria-hidden="true">
+        <div class="quiz__progress-bar" id="quiz-progress"></div>
+    </div>
+
+    <!-- INTRO -->
+    <section class="quiz__screen quiz__screen--intro is-active" data-screen="intro">
+        <div class="quiz__container">
+            <div class="quiz__intro" data-anim="1">
+                <span class="quiz__eyebrow">Antes de entrar</span>
+                <h1 class="quiz__title">¿Lo tuyo es <em>esto</em>?</h1>
+                <p class="quiz__lead">Cinco preguntas, un minuto. Te decimos honestamente si nuestro voluntariado de comunicación encaja con tu perfil — o si tu rol está en otro lugar.</p>
+
+                <div class="quiz__intro-meta">
+                    <div class="quiz__intro-meta-cell">
+                        <span class="quiz__intro-num">5</span>
+                        <span class="quiz__intro-lab">preguntas</span>
+                    </div>
+                    <div class="quiz__intro-meta-cell">
+                        <span class="quiz__intro-num">≈ 1</span>
+                        <span class="quiz__intro-lab">minuto</span>
+                    </div>
+                    <div class="quiz__intro-meta-cell">
+                        <span class="quiz__intro-num">4</span>
+                        <span class="quiz__intro-lab">perfiles</span>
+                    </div>
+                </div>
+
+                <button class="quiz__cta" data-action="start">
+                    <span class="quiz__cta-dot"></span>
+                    Empezar el quiz
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+                </button>
+                <p class="quiz__intro-foot">No guardamos datos. El resultado es solo para vos.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREGUNTAS · se renderizan dinámicamente -->
+    <section class="quiz__screen quiz__screen--question" data-screen="question">
+        <div class="quiz__container">
+            <div class="quiz__q" id="quiz-q">
+                <!-- inyectado por JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- RESULTADO -->
+    <section class="quiz__screen quiz__screen--result" data-screen="result">
+        <div class="quiz__container">
+            <div class="quiz__result" id="quiz-result">
+                <!-- inyectado por JS según perfil ganador -->
+            </div>
+        </div>
+    </section>
+
+</div>
+
+<!-- Botón flotante "Atrás" (visible durante preguntas) -->
+<button class="quiz__back" id="quiz-back" aria-label="Pregunta anterior" hidden>
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    <span>Atrás</span>
+</button>
+
+<script src="assets/js/quiz.js?v=5" defer></script>
+</body>
+</html>

@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#0F2C52" />
+<title>Manos Abiertas con Norte · Presentación del proyecto</title>
+<meta name="description" content="Presentación interactiva del proyecto Nuevos Formatos de la Comunicación para Manos Abiertas con Norte (Red La Salle, Sevilla)." />
+
+<link rel="icon" type="image/png" sizes="192x192" href="assets/img/logo-small.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/img/logo-small.png" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,300..700,0..100,0..1;1,9..144,300..700,0..100,0..1&family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/presentacion.css?v=5" />
+</head>
+<body>
+
+<!-- Barra de progreso -->
+<div class="hud__progress" aria-hidden="true">
+    <div class="hud__progress-bar" id="progress-bar"></div>
+</div>
+
+<!-- Botón de menú -->
+<button class="hud__menu-toggle" id="menu-toggle" aria-label="Abrir índice">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+</button>
+
+<!-- ESCENARIO -->
+<div class="stage">
+<div class="deck" id="deck">
+
+    <!-- ====================================================
+         SLIDE 1 — PORTADA
+         ==================================================== -->
+    <section class="slide cover is-active" data-slide="1" data-title="Portada">
+        <div class="cover__copy">
+            <div class="cover__brand" data-anim="1">
+                <div class="cover__brand-mark">
+                    <img src="assets/img/logo-manos-abiertas.png" alt="" />
+                </div>
+                <div class="cover__brand-text">
+                    <span class="cover__brand-title">Manos Abiertas<em> con Norte</em></span>
+                    <span class="cover__brand-lab">Lab de Comunicación e Innovación · Curso 25/26</span>
+                </div>
+            </div>
+
+            <div class="cover__kicker" data-anim="2">
+                <span class="cover__kicker-dot"></span>
+                Nuevos formatos de la comunicación
+            </div>
+
+            <h1 class="cover__title" data-anim="3">
+                Un barrio<br>
+                <em>que se cuenta</em><br>
+                a sí mismo.
+            </h1>
+
+            <p class="cover__lead" data-anim="4">
+                Auditoría, estrategia y prototipos para una ONG que lleva 32 años cuidando del Polígono Norte de Sevilla.
+            </p>
+
+            <div class="cover__team" data-anim="5">
+                <div class="cover__team-label">Equipo del Lab</div>
+                <div class="cover__team-list">
+                    <span>Agustina Vallena</span>
+                    <span>Lucas Gorodneff</span>
+                    <span>Karelyn Salvador</span>
+                    <span>Nolan Bueno</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="cover__visual" data-anim="3">
+            <div class="cover__visual-frame">
+                <div class="cover__visual-tag">
+                    <span class="mark-ab"></span>
+                    Proyecto · 2025
+                </div>
+                <div class="cover__visual-num">32</div>
+                <div class="cover__visual-foot">
+                    <span><strong>32 años</strong><br>en el Polígono Norte</span>
+                    <span style="text-align:right;"><strong>Red La Salle</strong><br>Andalucía</span>
+                </div>
+            </div>
+            <div class="cover__sticker">
+                <span class="mark-ab mark-ab--lg"></span>
+                <span>Presentación interna<br>al equipo · Sevilla</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SLIDE 2 — ANTES DE EMPEZAR · QR (movido desde slide 15)
+         ==================================================== -->
+    <section class="slide landing slide--dark" data-slide="2" data-title="Antes de empezar · QR">
+        <span class="slide__page" style="color:rgba(255,255,255,.45);">02 / 18</span>
+        <div class="landing__copy">
+            <span class="eyebrow" data-anim="1">Antes de empezar</span>
+            <h2 data-anim="2">Antes de seguir,<br><em>escaneá esto</em>.</h2>
+            <p class="lead" data-anim="3">Tomate un minuto. Hacé un quiz corto que te dice honestamente si esta propuesta de voluntariado encaja con tu perfil. Después, durante la presentación, te contamos cómo llegamos a ella.</p>
+
+            <div class="landing__features">
+                <div class="landing__feat" data-anim="4"><span><strong>5 preguntas</strong> sobre tu perfil profesional y disponibilidad</span></div>
+                <div class="landing__feat" data-anim="4"><span><strong>4 perfiles posibles</strong> · resultado personalizado al final</span></div>
+                <div class="landing__feat" data-anim="5"><span><strong>≈ 1 minuto</strong> · podés hacerlo mientras presentamos</span></div>
+                <div class="landing__feat" data-anim="5"><span><strong>Sin guardar datos</strong> · solo para vos</span></div>
+            </div>
+
+            <div class="landing__url" data-anim="6">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                lucasgorod.github.io/manos-abiertas-lab/quiz.html
+            </div>
+        </div>
+
+        <div data-anim="3">
+            <div class="qr-block">
+                <div class="qr-block__head">
+                    <span class="qr-block__title">Escaneá ahora</span>
+                    <span class="qr-block__num">QR</span>
+                </div>
+                <div class="qr-block__canvas" id="qr-landing" data-loading="true"></div>
+                <div class="qr-block__foot">
+                    <span class="qr-block__foot-arrow">↗ 5 preguntas, 1 minuto</span>
+                    <p>Te decimos si esta propuesta encaja con tu perfil — y a partir del resultado, te abrimos la landing.</p>
+                </div>
+                <div class="qr-block__sticker">
+                    <span class="mark-ab"></span>
+                    Hacelo<br>antes de seguir
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SLIDE 3 — ÍNDICE / SUMARIO (era slide 2)
+         ==================================================== -->
+    <section class="slide tdc" data-slide="3" data-title="Índice del proyecto">
+        <span class="slide__page">03 / 18</span>
+        <div class="tdc__head" data-anim="1">
+            <div>
+                <span class="eyebrow">El recorrido</span>
+                <h2>Seis salas,<br>un mismo <em>encargo</em>.</h2>
+            </div>
+            <div class="tdc__meta">
+                <strong>21 páginas</strong> de informe<br>
+                resumidas en <strong>18 slides</strong><br>
+                ≈ 15 minutos de lectura
+            </div>
+        </div>
+
+        <div class="tdc__grid">
+            <button class="tdc__item" data-go="4" data-anim="2">
+                <span class="tdc__item-num">Sala I</span>
+                <h3 class="tdc__item-title">Quiénes son</h3>
+                <p class="tdc__item-desc">Manos Abiertas con Norte, en activo desde 1992. Quién hace qué, dónde y para quién.</p>
+                <span class="tdc__item-pages">Slides 04 — 05</span>
+            </button>
+            <button class="tdc__item" data-go="6" data-anim="2">
+                <span class="tdc__item-num">Sala II</span>
+                <h3 class="tdc__item-title">Punto de partida</h3>
+                <p class="tdc__item-desc">Identidad sin definir y comunicación improvisada. Qué cuatro objetivos guían la auditoría.</p>
+                <span class="tdc__item-pages">Slides 06 — 07</span>
+            </button>
+            <button class="tdc__item" data-go="8" data-anim="3">
+                <span class="tdc__item-num">Sala III</span>
+                <h3 class="tdc__item-title">Diagnóstico</h3>
+                <p class="tdc__item-desc">Comparativa cuantitativa con Save the Children: redes, web, mailing. Lo bueno, lo flojo y lo ausente.</p>
+                <span class="tdc__item-pages">Slides 08 — 10</span>
+            </button>
+            <button class="tdc__item" data-go="11" data-anim="3">
+                <span class="tdc__item-num">Sala IV</span>
+                <h3 class="tdc__item-title">Plan CAME</h3>
+                <p class="tdc__item-desc">Corregir, Afrontar, Mantener, Explorar. El qué hacer en los próximos doce meses.</p>
+                <span class="tdc__item-pages">Slide 11</span>
+            </button>
+            <button class="tdc__item" data-go="12" data-anim="4">
+                <span class="tdc__item-num">Sala V</span>
+                <h3 class="tdc__item-title">Estrategia y prototipos</h3>
+                <p class="tdc__item-desc">Tres pilares, modelo 70/20/10, giro narrativo y mockups. Lo que pasaría si esto se ejecuta.</p>
+                <span class="tdc__item-pages">Slides 12 — 15</span>
+            </button>
+            <button class="tdc__item" data-go="16" data-anim="4">
+                <span class="tdc__item-num">Sala VI</span>
+                <h3 class="tdc__item-title">Ejecución</h3>
+                <p class="tdc__item-desc">Ecosistema digital, roadmap a tres meses y la propuesta del Laboratorio de Comunicación Social con la US.</p>
+                <span class="tdc__item-pages">Slides 16 — 18</span>
+            </button>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SLIDE 3 — QUIÉNES SON
+         ==================================================== -->
+    <section class="slide who slide--white" data-slide="4" data-title="Quiénes son">
+        <span class="slide__page">04 / 18</span>
+        <div class="sala-head" data-anim="1">
+            <span class="sala-num">Sala I</span>
+            <span class="sala-div"></span>
+            <span class="sala-label">Sobre la institución</span>
+        </div>
+
+        <div class="who__body">
+            <div class="who__copy" data-anim="2">
+                <span class="eyebrow">Manos Abiertas con Norte</span>
+                <h2 style="margin-top: 18px;">Una ONG socioeducativa <em>del Polígono Norte</em> y El Vacíe.</h2>
+                <p>Fundada en <strong style="color:var(--c-navy);">1992</strong> por un grupo de jóvenes que detectaron necesidades sociales en el barrio. Forma parte de la Red de Obras Socioeducativas de La Salle.</p>
+                <p>Educan integralmente a niños y jóvenes en situación de vulnerabilidad como medio para prevenir consumo, abandono escolar y exclusión social. Atienden también a familias, población gitana e inmigrante.</p>
+            </div>
+
+            <div class="who__network" data-anim="3" aria-label="Red de Manos Abiertas con Norte">
+                <svg viewBox="0 0 540 540" class="who__net-svg" xmlns="http://www.w3.org/2000/svg">
+                    <!-- líneas conectoras desde centro -->
+                    <line x1="270" y1="270" x2="135" y2="155" class="who__net-line" />
+                    <line x1="270" y1="270" x2="412" y2="142" class="who__net-line" />
+                    <line x1="270" y1="270" x2="115" y2="395" class="who__net-line" />
+                    <line x1="270" y1="270" x2="430" y2="395" class="who__net-line" />
+                    <!-- centro -->
+                    <circle cx="270" cy="270" r="58" fill="#0F2C52" />
+                    <circle cx="270" cy="270" r="58" fill="none" stroke="#F4C430" stroke-width="2" stroke-dasharray="3 4" />
+                    <text x="270" y="265" text-anchor="middle" class="who__net-core-num">4</text>
+                    <text x="270" y="290" text-anchor="middle" class="who__net-core-lab">técnicos</text>
+                    <!-- nodos -->
+                    <g class="who__net-node who__net-node--40">
+                        <circle cx="135" cy="155" r="74" />
+                        <text x="135" y="150" text-anchor="middle" class="who__net-num">40</text>
+                        <text x="135" y="178" text-anchor="middle" class="who__net-lab">voluntarios</text>
+                    </g>
+                    <g class="who__net-node who__net-node--70">
+                        <circle cx="412" cy="142" r="92" />
+                        <text x="412" y="135" text-anchor="middle" class="who__net-num">70</text>
+                        <text x="412" y="167" text-anchor="middle" class="who__net-lab">asociados</text>
+                    </g>
+                    <g class="who__net-node who__net-node--30">
+                        <circle cx="115" cy="395" r="68" />
+                        <text x="115" y="392" text-anchor="middle" class="who__net-num">30+</text>
+                        <text x="115" y="418" text-anchor="middle" class="who__net-lab">entidades</text>
+                    </g>
+                    <g class="who__net-node who__net-node--32">
+                        <circle cx="430" cy="395" r="78" />
+                        <text x="430" y="388" text-anchor="middle" class="who__net-num">32</text>
+                        <text x="430" y="414" text-anchor="middle" class="who__net-lab">años activos</text>
+                    </g>
+                </svg>
+                <div class="who__net-foot">
+                    <span class="mark-ab"></span>
+                    <span>Una red de <strong>+ 144 personas</strong> sosteniendo el barrio</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SLIDE 4 — CINCO EJES DE ACCIÓN
+         ==================================================== -->
+    <section class="slide axes slide--white" data-slide="5" data-title="Cinco ejes de acción">
+        <span class="slide__page">05 / 18</span>
+        <div class="slide__head" data-anim="1">
+            <div>
+                <span class="eyebrow">Programas socioeducativos</span>
+                <h2>Cinco ejes,<br>una <em>misma idea fuerza</em>.</h2>
+            </div>
+            <div class="slide__head-side">
+                <strong>Intervienen donde la escuela no llega</strong>. Cada programa nace de una necesidad real detectada por las familias del barrio y acompaña a los menores en procesos concretos.
+            </div>
+        </div>
+
+        <div class="axes__list">
+            <article class="axe" data-anim="2">
+                <span class="axe__num">I</span>
+                <span class="axe__icon">🪑</span>
+                <h4 class="axe__title">Aula de convivencia</h4>
+                <p class="axe__desc">Alumnos expulsados de centros educativos siguen sus tareas con el equipo y participan en dinámicas de reinserción escolar.</p>
+            </article>
+            <article class="axe" data-anim="3">
+                <span class="axe__num">II</span>
+                <span class="axe__icon">📚</span>
+                <h4 class="axe__title">Refuerzo educativo</h4>
+                <p class="axe__desc">Talleres temáticos y un plan lector para mejorar las perspectivas escolares de los niños del Polígono.</p>
+            </article>
+            <article class="axe" data-anim="4">
+                <span class="axe__num">III</span>
+                <span class="axe__icon">👨‍👩‍👧</span>
+                <h4 class="axe__title">Talleres con familias</h4>
+                <p class="axe__desc">Padres y madres reflexionan sobre su rol educativo para reforzar en casa lo aprendido en el centro.</p>
+            </article>
+            <article class="axe" data-anim="5">
+                <span class="axe__num">IV</span>
+                <span class="axe__icon">🤝</span>
+                <h4 class="axe__title">Voluntariado</h4>
+                <p class="axe__desc">Jornadas de formación e información para los 40 voluntarios, motor real de los proyectos.</p>
+            </article>
+            <article class="axe" data-anim="6">
+                <span class="axe__num">V</span>
+                <span class="axe__icon">☀️</span>
+                <h4 class="axe__title">Verano</h4>
+                <p class="axe__desc">Cada julio: campamento y escuela de verano con dinámicas educativas, ocio y tiempo libre conducidas por voluntariado.</p>
+            </article>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SLIDE 5 — PUNTO DE PARTIDA / PROBLEMA
+         ==================================================== -->
+    <section class="slide problem slide--dark" data-slide="6" data-title="Punto de partida">
+        <span class="slide__page">06 / 18</span>
+        <div class="sala-head" data-anim="1">
+            <span class="sala-num">Sala II</span>
+            <span class="sala-div"></span>
+            <span class="sala-label">Punto de partida</span>
+        </div>
+
+        <blockquote class="problem__quote" data-anim="2">
+            No tenemos una identidad<br>
+            institucional definida.<br>
+            Comunicamos <em>desde la improvisación</em>.
+        </blockquote>
+        <p class="problem__attr" data-anim="2"><strong>Diagnóstico inicial</strong> · entrevistas al equipo de Manos Abiertas con Norte, octubre 2025</p>
+
+        <div class="problem__pain">
+            <div class="pain" data-anim="3">
+                <div class="pain__icon">!</div>
+                <h4>Sin identidad visual</h4>
+                <p>No hay paleta, tipografías ni manual de marca. Cada pieza se diseña desde cero, sin coherencia.</p>
+            </div>
+            <div class="pain" data-anim="4">
+                <div class="pain__icon">!</div>
+                <h4>Sin narrativa institucional</h4>
+                <p>Saben qué hacen y por qué, pero no han traducido la misión a un relato con valor periodístico.</p>
+            </div>
+            <div class="pain" data-anim="5">
+                <div class="pain__icon">!</div>
+                <h4>Sin equipo de comunicación</h4>
+                <p>Limitaciones presupuestarias: la comunicación recae en personal técnico ya saturado de tareas socioeducativas.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SLIDE 6 — OBJETIVOS DE LA AUDITORÍA
+         ==================================================== -->
+    <section class="slide objectives slide--white" data-slide="7" data-title="Objetivos de la auditoría">
+        <span class="slide__page">07 / 18</span>
+        <div class="slide__head" data-anim="1">
+            <div>
+                <span class="eyebrow">Auditoría de comunicación digital</span>
+                <h2>Lo que vinimos<br>a <em>responder</em>.</h2>
+            </div>
+            <div class="slide__head-side">
+                A partir de la <strong>observación directa</strong> de canales propios y referentes, se persiguen cuatro objetivos de auditoría que ordenan el resto del trabajo.
+            </div>
+        </div>
+
+        <div class="objectives__list">
+            <article class="objective" data-anim="2">
+                <span class="objective__num">i</span>
+                <div class="objective__body">
+                    <h4>Evaluar la presencia digital actual</h4>
+                    <p>Determinar la capacidad real de la comunicación digital de la ONG para sostener la captación de donaciones y voluntariado.</p>
+                </div>
+            </article>
+            <article class="objective" data-anim="3">
+                <span class="objective__num">ii</span>
+                <div class="objective__body">
+                    <h4>Analizar la coherencia de la identidad</h4>
+                    <p>Narrativa institucional, línea gráfica y tono. Verificar su capacidad para generar confianza en potenciales donantes.</p>
+                </div>
+            </article>
+            <article class="objective" data-anim="4">
+                <span class="objective__num">iii</span>
+                <div class="objective__body">
+                    <h4>Examinar la relación con los públicos</h4>
+                    <p>Especialmente con voluntarios y posibles donantes en el entorno digital: redes sociales, web y email.</p>
+                </div>
+            </article>
+            <article class="objective" data-anim="5">
+                <span class="objective__num">iv</span>
+                <div class="objective__body">
+                    <h4>Distinguir oportunidades de mejora</h4>
+                    <p>Identificar palancas concretas de la estrategia digital para aumentar visibilidad, credibilidad y apoyo económico.</p>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SLIDE 7 — DIAGNÓSTICO REDES SOCIALES (gráfico)
+         ==================================================== -->
+    <section class="slide barchart-slide slide--white" data-slide="8" data-title="Diagnóstico · Redes sociales">
+        <span class="slide__page">08 / 18</span>
+        <div class="sala-head" data-anim="1">
+            <span class="sala-num">Sala III</span>
+            <span class="sala-div"></span>
+            <span class="sala-label">Diagnóstico · Redes sociales</span>
+        </div>
+
+        <div class="barchart__head" data-anim="2">
+            <div>
+                <span class="eyebrow">La brecha en números absolutos</span>
+                <h2>Save the Children es <em>hasta 200 ×</em> más grande.</h2>
+            </div>
+            <div class="barchart__legend">
+                <span class="barchart__legend-item"><span class="barchart__legend-dot" style="background:var(--c-navy);"></span>Manos Abiertas</span>
+                <span class="barchart__legend-item"><span class="barchart__legend-dot" style="background:var(--c-yellow);"></span>Save the Children</span>
+            </div>
+        </div>
+
+        <div class="barchart" data-anim="3" data-bars>
+            <article class="bar">
+                <header class="bar__head">
+                    <span class="bar__icon">IG</span>
+                    <span class="bar__metric">Instagram · seguidores</span>
+                    <span class="bar__factor">× 58</span>
+                </header>
+                <div class="bar__row">
+                    <span class="bar__label">Manos</span>
+                    <div class="bar__track"><div class="bar__fill bar__fill--us" data-pct="1.7"></div></div>
+                    <span class="bar__value">1 384</span>
+                </div>
+                <div class="bar__row">
+                    <span class="bar__label">Save</span>
+                    <div class="bar__track"><div class="bar__fill bar__fill--ref" data-pct="100"></div></div>
+                    <span class="bar__value">81 000</span>
+                </div>
+            </article>
+
+            <article class="bar">
+                <header class="bar__head">
+                    <span class="bar__icon">FB</span>
+                    <span class="bar__metric">Facebook · likes</span>
+                    <span class="bar__factor">× 200</span>
+                </header>
+                <div class="bar__row">
+                    <span class="bar__label">Manos</span>
+                    <div class="bar__track"><div class="bar__fill bar__fill--us" data-pct="0.5"></div></div>
+                    <span class="bar__value">1 087</span>
+                </div>
+                <div class="bar__row">
+                    <span class="bar__label">Save</span>
+                    <div class="bar__track"><div class="bar__fill bar__fill--ref" data-pct="100"></div></div>
+                    <span class="bar__value">217 332</span>
+                </div>
+            </article>
+
+            <article class="bar">
+                <header class="bar__head">
+                    <span class="bar__icon">in</span>
+                    <span class="bar__metric">LinkedIn · seguidores</span>
+                    <span class="bar__factor bar__factor--inf">∞</span>
+                </header>
+                <div class="bar__row bar__row--zero">
+                    <span class="bar__label">Manos</span>
+                    <div class="bar__track"><div class="bar__fill bar__fill--us" data-pct="0"></div></div>
+                    <span class="bar__value bar__value--zero">No tienen</span>
+                </div>
+                <div class="bar__row">
+                    <span class="bar__label">Save</span>
+                    <div class="bar__track"><div class="bar__fill bar__fill--ref" data-pct="100"></div></div>
+                    <span class="bar__value">55 705</span>
+                </div>
+            </article>
+
+            <article class="bar">
+                <header class="bar__head">
+                    <span class="bar__icon">TT</span>
+                    <span class="bar__metric">TikTok · seguidores</span>
+                    <span class="bar__factor bar__factor--inf">∞</span>
+                </header>
+                <div class="bar__row bar__row--zero">
+                    <span class="bar__label">Manos</span>
+                    <div class="bar__track"><div class="bar__fill bar__fill--us" data-pct="0"></div></div>
+                    <span class="bar__value bar__value--zero">No tienen</span>
+                </div>
+                <div class="bar__row">
+                    <span class="bar__label">Save</span>
+                    <div class="bar__track"><div class="bar__fill bar__fill--ref" data-pct="100"></div></div>
+                    <span class="bar__value">20 800</span>
+                </div>
+            </article>
+        </div>
+
+        <footer class="barchart__foot" data-anim="4">
+            <div class="barchart__foot-cell">
+                <span class="barchart__foot-num">2 / 6</span>
+                <span class="barchart__foot-lab">Plataformas activas <small>vs 6 del referente</small></span>
+            </div>
+            <div class="barchart__foot-cell">
+                <span class="barchart__foot-num">1.6 : 1</span>
+                <span class="barchart__foot-lab">Ratio seg./seguidos en IG <small>vs 152 : 1 del referente</small></span>
+            </div>
+            <div class="barchart__foot-cell">
+                <span class="barchart__foot-num">Irregular</span>
+                <span class="barchart__foot-lab">Frecuencia <small>Save publica diariamente</small></span>
+            </div>
+            <div class="barchart__foot-cell">
+                <span class="barchart__foot-num">1 — 4 %</span>
+                <span class="barchart__foot-lab">Engagement estimado <small>el referente: alto</small></span>
+            </div>
+        </footer>
+    </section>
+
+    <!-- ====================================================
+         SLIDE 8 — DIAGNÓSTICO WEB · SCORECARD
+         ==================================================== -->
+    <section class="slide scorecard-slide slide--white" data-slide="9" data-title="Diagnóstico · Web">
+        <span class="slide__page">09 / 18</span>
+        <div class="sala-head" data-anim="1">
+            <span class="sala-num">Sala III</span>
+            <span class="sala-div"></span>
+            <span class="sala-label">Diagnóstico · Web institucional</span>
+        </div>
+
+        <div class="scorecard__head" data-anim="2">
+            <div>
+                <span class="eyebrow">12 criterios de salud web</span>
+                <h2>Hoy <em>aprobamos 2</em>. El referente, los 12.</h2>
+            </div>
+            <p class="scorecard__lead">Auditoría sobre identidad, conversión, mantenimiento y SEO. La distancia no es de presupuesto, es de mirada.</p>
+        </div>
+
+        <div class="scorecard">
+            <article class="score-ring score-ring--us" data-anim="3">
+                <svg viewBox="0 0 200 200">
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="#F3F5F9" stroke-width="22" />
+                    <circle class="score-ring__progress" cx="100" cy="100" r="80"
+                            fill="none" stroke="#B8312D" stroke-width="22"
+                            stroke-linecap="round"
+                            stroke-dasharray="502.65" stroke-dashoffset="502.65"
+                            data-pct="16.7"
+                            transform="rotate(-90 100 100)" />
+                </svg>
+                <div class="score-ring__text">
+                    <span class="score-ring__num"><span data-count="2">0</span><small>/ 12</small></span>
+                    <span class="score-ring__pct"><span data-count="16.7" data-decimals="0">0</span> %</span>
+                </div>
+                <div class="score-ring__foot">
+                    <strong>manosabiertasnorte.org</strong>
+                    <span>Hoy</span>
+                </div>
+            </article>
+
+            <div class="score-list" data-anim="4">
+                <span class="score-list__header">
+                    <span></span>
+                    <span class="score-list__col">Manos</span>
+                    <span class="score-list__col">Save</span>
+                </span>
+                <div class="score-pill"><span>HTTPS / SSL</span><span class="score-pill__dot score-pill__dot--bad">✕</span><span class="score-pill__dot score-pill__dot--ok">✓</span></div>
+                <div class="score-pill"><span>Diseño profesional</span><span class="score-pill__dot score-pill__dot--bad">✕</span><span class="score-pill__dot score-pill__dot--ok">✓</span></div>
+                <div class="score-pill"><span>Identidad visual propia</span><span class="score-pill__dot score-pill__dot--bad">✕</span><span class="score-pill__dot score-pill__dot--ok">✓</span></div>
+                <div class="score-pill"><span>Favicon personalizado</span><span class="score-pill__dot score-pill__dot--bad">✕</span><span class="score-pill__dot score-pill__dot--ok">✓</span></div>
+                <div class="score-pill"><span>Responsive completo</span><span class="score-pill__dot score-pill__dot--mid">~</span><span class="score-pill__dot score-pill__dot--ok">✓</span></div>
+                <div class="score-pill"><span>Blog activo</span><span class="score-pill__dot score-pill__dot--bad">✕</span><span class="score-pill__dot score-pill__dot--ok">✓</span></div>
+                <div class="score-pill"><span>Enlaces a redes</span><span class="score-pill__dot score-pill__dot--bad">✕</span><span class="score-pill__dot score-pill__dot--ok">✓</span></div>
+                <div class="score-pill"><span>Sección transparencia</span><span class="score-pill__dot score-pill__dot--mid">~</span><span class="score-pill__dot score-pill__dot--ok">✓</span></div>
+                <div class="score-pill"><span>CTAs donación / socio</span><span class="score-pill__dot score-pill__dot--mid">~</span><span class="score-pill__dot score-pill__dot--ok">✓</span></div>
+                <div class="score-pill"><span>Formulario suscripción</span><span class="score-pill__dot score-pill__dot--bad">✕</span><span class="score-pill__dot score-pill__dot--ok">✓</span></div>
+                <div class="score-pill"><span>SEO técnico</span><span class="score-pill__dot score-pill__dot--bad">✕</span><span class="score-pill__dot score-pill__dot--ok">✓</span></div>
+                <div class="score-pill"><span>Cookies RGPD configurables</span><span class="score-pill__dot score-pill__dot--bad">✕</span><span class="score-pill__dot score-pill__dot--ok">✓</span></div>
+            </div>
+
+            <article class="score-ring score-ring--ref" data-anim="3">
+                <svg viewBox="0 0 200 200">
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="#F3F5F9" stroke-width="22" />
+                    <circle class="score-ring__progress" cx="100" cy="100" r="80"
+                            fill="none" stroke="#3F8559" stroke-width="22"
+                            stroke-linecap="round"
+                            stroke-dasharray="502.65" stroke-dashoffset="502.65"
+                            data-pct="100"
+                            transform="rotate(-90 100 100)" />
+                </svg>
+                <div class="score-ring__text">
+                    <span class="score-ring__num"><span data-count="12">0</span><small>/ 12</small></span>
+                    <span class="score-ring__pct"><span data-count="100" data-decimals="0">0</span> %</span>
+                </div>
+                <div class="score-ring__foot">
+                    <strong>savethechildren.es</strong>
+                    <span>Referente</span>
+                </div>
+            </article>
+        </div>
+
+        <p class="scorecard__verdict" data-anim="5">
+            <span class="mark-ab"></span>
+            La diferencia no es solo estética: <strong>cada criterio fallido</strong> es un punto donde un donante potencial decide no continuar.
+        </p>
+    </section>
+
+    <!-- ====================================================
+         SLIDE 9 — DIAGNÓSTICO MAILING · EMBUDO
+         ==================================================== -->
+    <section class="slide funnel-slide slide--cream" data-slide="10" data-title="Diagnóstico · Mailing">
+        <span class="slide__page">10 / 18</span>
+        <div class="sala-head" data-anim="1">
+            <span class="sala-num">Sala III</span>
+            <span class="sala-div"></span>
+            <span class="sala-label">Diagnóstico · Estrategia de mailing</span>
+        </div>
+
+        <div class="funnel__head" data-anim="2">
+            <div>
+                <span class="eyebrow">El embudo del donante digital</span>
+                <h2>Hoy <em>no hay embudo</em>. Hay un canal sin entrada.</h2>
+            </div>
+            <p class="funnel__lead">Toda ONG madura convierte seguidor → suscriptor → donante por email. Aquí vemos el flujo completo del referente y dónde se interrumpe el nuestro.</p>
+        </div>
+
+        <div class="funnel">
+            <div class="funnel__col funnel__col--us">
+                <header class="funnel__col-head">
+                    <span class="funnel__col-tag">Manos Abiertas</span>
+                    <span class="funnel__col-status funnel__col-status--bad">Embudo cortado</span>
+                </header>
+                <div class="funnel__step funnel__step--ok">
+                    <span class="funnel__step-n">01</span>
+                    <div class="funnel__step-body">
+                        <h4>Audiencia en redes</h4>
+                        <p>1 384 IG · 1 087 FB</p>
+                    </div>
+                    <span class="funnel__step-bar" style="--w: 100%;"></span>
+                </div>
+                <div class="funnel__step funnel__step--break">
+                    <span class="funnel__step-n">02</span>
+                    <div class="funnel__step-body">
+                        <h4>Tráfico a la web</h4>
+                        <p>Sin link bio funcional</p>
+                    </div>
+                    <span class="funnel__step-bar" style="--w: 8%;"></span>
+                </div>
+                <div class="funnel__step funnel__step--zero">
+                    <span class="funnel__step-n">03</span>
+                    <div class="funnel__step-body">
+                        <h4>Suscriptores email</h4>
+                        <p>Sin formulario en la web</p>
+                    </div>
+                    <span class="funnel__step-bar" style="--w: 0%;"></span>
+                </div>
+                <div class="funnel__step funnel__step--zero">
+                    <span class="funnel__step-n">04</span>
+                    <div class="funnel__step-body">
+                        <h4>Newsletter mensual</h4>
+                        <p>No existe</p>
+                    </div>
+                    <span class="funnel__step-bar" style="--w: 0%;"></span>
+                </div>
+                <div class="funnel__step funnel__step--zero">
+                    <span class="funnel__step-n">05</span>
+                    <div class="funnel__step-body">
+                        <h4>Donantes recurrentes</h4>
+                        <p>Solo IBAN en sidebar</p>
+                    </div>
+                    <span class="funnel__step-bar" style="--w: 0%;"></span>
+                </div>
+            </div>
+
+            <div class="funnel__col funnel__col--ref">
+                <header class="funnel__col-head">
+                    <span class="funnel__col-tag">Save the Children</span>
+                    <span class="funnel__col-status funnel__col-status--ok">Embudo completo</span>
+                </header>
+                <div class="funnel__step funnel__step--ok">
+                    <span class="funnel__step-n">01</span>
+                    <div class="funnel__step-body">
+                        <h4>Audiencia en redes</h4>
+                        <p>+ 375 000 cuentas</p>
+                    </div>
+                    <span class="funnel__step-bar" style="--w: 100%;"></span>
+                </div>
+                <div class="funnel__step funnel__step--ok">
+                    <span class="funnel__step-n">02</span>
+                    <div class="funnel__step-body">
+                        <h4>Tráfico a la web</h4>
+                        <p>Linktree · CTAs en bio</p>
+                    </div>
+                    <span class="funnel__step-bar" style="--w: 88%;"></span>
+                </div>
+                <div class="funnel__step funnel__step--ok">
+                    <span class="funnel__step-n">03</span>
+                    <div class="funnel__step-body">
+                        <h4>Suscriptores email</h4>
+                        <p>Landing + popup · captura activa</p>
+                    </div>
+                    <span class="funnel__step-bar" style="--w: 70%;"></span>
+                </div>
+                <div class="funnel__step funnel__step--ok">
+                    <span class="funnel__step-n">04</span>
+                    <div class="funnel__step-body">
+                        <h4>Newsletter segmentada</h4>
+                        <p>Por tipo de público + bienvenida</p>
+                    </div>
+                    <span class="funnel__step-bar" style="--w: 55%;"></span>
+                </div>
+                <div class="funnel__step funnel__step--ok">
+                    <span class="funnel__step-n">05</span>
+                    <div class="funnel__step-body">
+                        <h4>Donantes recurrentes</h4>
+                        <p>Hazte socio · Apadrina · Dona</p>
+                    </div>
+                    <span class="funnel__step-bar" style="--w: 35%;"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SLIDE 10 — PLAN CAME
+         ==================================================== -->
+    <section class="slide came slide--white" data-slide="11" data-title="Plan CAME">
+        <span class="slide__page">11 / 18</span>
+        <div class="sala-head" data-anim="1">
+            <span class="sala-num">Sala IV</span>
+            <span class="sala-div"></span>
+            <span class="sala-label">Plan de acción · Análisis CAME</span>
+        </div>
+
+        <div class="came__grid">
+            <article class="came__quad came__quad--c" data-anim="2">
+                <span class="came__quad-letter">C</span>
+                <span class="came__quad-tag" style="color:#B8312D;">Corregir · debilidades</span>
+                <h3>Acción inmediata,<br><em>antes de comunicar nada nuevo</em>.</h3>
+                <ul class="came__quad-list">
+                    <li><span class="came__quad-list-id">C1</span><span><strong>Migrar la web a HTTPS</strong> con Let's Encrypt</span><span class="came__quad-list-due">2 sem.</span></li>
+                    <li><span class="came__quad-list-id">C2</span><span><strong>Corregir enlaces rotos</strong> · dominio incorrecto</span><span class="came__quad-list-due">2 sem.</span></li>
+                    <li><span class="came__quad-list-id">C3</span><span><strong>Instalar favicon</strong> con el logo institucional</span><span class="came__quad-list-due">1 sem.</span></li>
+                    <li><span class="came__quad-list-id">C4</span><span><strong>Enlaces a Instagram y Facebook</strong> en cabecera y pie</span><span class="came__quad-list-due">1 sem.</span></li>
+                    <li><span class="came__quad-list-id">C5</span><span>Actualizar bio de Instagram con <strong>enlace funcional</strong></span><span class="came__quad-list-due">1 sem.</span></li>
+                </ul>
+            </article>
+
+            <article class="came__quad came__quad--a" data-anim="3">
+                <span class="came__quad-letter">A</span>
+                <span class="came__quad-tag" style="color:#9C7A1A;">Afrontar · amenazas</span>
+                <h3>Construir lo que <em>no existe</em> antes de que duela más.</h3>
+                <ul class="came__quad-list">
+                    <li><span class="came__quad-list-id">A1</span><span><strong>Identidad visual digital básica</strong> · paleta + tipografías + plantillas</span><span class="came__quad-list-due">1 mes</span></li>
+                    <li><span class="came__quad-list-id">A2</span><span><strong>Calendario editorial</strong> · 3 publicaciones/semana</span><span class="came__quad-list-due">2 meses</span></li>
+                    <li><span class="came__quad-list-id">A3</span><span><strong>Email marketing básico</strong> · suscripción + bienvenida + newsletter mensual</span><span class="came__quad-list-due">2 meses</span></li>
+                </ul>
+            </article>
+
+            <article class="came__quad came__quad--m" data-anim="4">
+                <span class="came__quad-letter">M</span>
+                <span class="came__quad-tag" style="color:#3F8559;">Mantener · fortalezas</span>
+                <h3>Lo que <em>ya funciona</em> y hay que potenciar.</h3>
+                <ul class="came__quad-list">
+                    <li><span class="came__quad-list-id">M1</span><span>Documentar actividades, pero <strong>convertir registro en narrativa</strong></span><span class="came__quad-list-due">Continuo</span></li>
+                    <li><span class="came__quad-list-id">M2</span><span>Reforzar la <strong>relación con la Red La Salle</strong></span><span class="came__quad-list-due">Continuo</span></li>
+                    <li><span class="came__quad-list-id">M3</span><span>Conservar la información institucional <strong>enriquecida con datos de impacto</strong></span><span class="came__quad-list-due">3 meses</span></li>
+                </ul>
+            </article>
+
+            <article class="came__quad came__quad--e" data-anim="5">
+                <span class="came__quad-letter">E</span>
+                <span class="came__quad-tag" style="color:#2A5897;">Explorar · oportunidades</span>
+                <h3>Apuestas a medio plazo <em>de alto retorno</em>.</h3>
+                <ul class="came__quad-list">
+                    <li><span class="came__quad-list-id">E1</span><span>Perfil <strong>LinkedIn institucional</strong> · alianzas y financiación</span><span class="came__quad-list-due">2 meses</span></li>
+                    <li><span class="came__quad-list-id">E2</span><span>Canal <strong>YouTube</strong> · mini-documentales 2 — 3 min</span><span class="came__quad-list-due">2 — 3 meses</span></li>
+                    <li><span class="came__quad-list-id">E3</span><span>Explorar <strong>TikTok</strong> · público joven</span><span class="came__quad-list-due">6 — 9 meses</span></li>
+                    <li><span class="came__quad-list-id">E4</span><span>Sección <strong>«Historias del barrio»</strong> en la web</span><span class="came__quad-list-due">3 — 5 meses</span></li>
+                    <li><span class="came__quad-list-id">E5</span><span><strong>Podcast mensual</strong> con voluntarios y profesionales</span><span class="came__quad-list-due">12 meses</span></li>
+                </ul>
+            </article>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SLIDE 11 — TRES PILARES (estrategia de contenidos)
+         ==================================================== -->
+    <section class="slide pillars slide--white" data-slide="12" data-title="Tres pilares">
+        <span class="slide__page">12 / 18</span>
+        <div class="slide__head" data-anim="1">
+            <div>
+                <span class="eyebrow">Sala V · Estrategia de contenidos</span>
+                <h2>Tres pilares,<br>una <em>misma misión</em>.</h2>
+            </div>
+            <div class="slide__head-side">
+                Toda la comunicación digital se ordena alrededor de tres objetivos. Cada pilar tiene su <strong>tipo de contenido</strong>, <strong>formato preferente</strong> y <strong>métrica de éxito</strong>.
+            </div>
+        </div>
+
+        <div class="pillars__grid">
+            <article class="pillar" data-anim="2">
+                <span class="pillar__num">i</span>
+                <h3 class="pillar__title">Visibilidad<em>· que más personas conozcan la causa</em></h3>
+                <p class="pillar__desc">Storytelling humano: testimonios de niños, voluntarios y familias. Reels y carruseles cargados emocionalmente.</p>
+                <div class="pillar__metric">
+                    <span class="pillar__metric-num">70<small style="font-size:.5em;">%</small></span>
+                    <span class="pillar__metric-lab">Del calendario<br>editorial</span>
+                </div>
+            </article>
+
+            <article class="pillar" data-anim="3">
+                <span class="pillar__num">ii</span>
+                <h3 class="pillar__title">Credibilidad<em>· que confíen en la institución</em></h3>
+                <p class="pillar__desc">Datos de impacto, behind the scenes, micro-entrevistas al equipo técnico. Mezcla de gráficas e imagen de archivo.</p>
+                <div class="pillar__metric">
+                    <span class="pillar__metric-num">20<small style="font-size:.5em;">%</small></span>
+                    <span class="pillar__metric-lab">Del calendario<br>editorial</span>
+                </div>
+            </article>
+
+            <article class="pillar" data-anim="4">
+                <span class="pillar__num">iii</span>
+                <h3 class="pillar__title">Conversión<em>· que donen, participen o se vinculen</em></h3>
+                <p class="pillar__desc">Llamadas a la acción claras: hazte voluntario, dona, comparte. Estructura narrativa de cuatro tiempos: gancho, historia, impacto, CTA.</p>
+                <div class="pillar__metric">
+                    <span class="pillar__metric-num">10<small style="font-size:.5em;">%</small></span>
+                    <span class="pillar__metric-lab">Del calendario<br>editorial</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SLIDE 12 — MODELO 70/20/10
+         ==================================================== -->
+    <section class="slide mix slide--cream" data-slide="13" data-title="Modelo 70/20/10">
+        <span class="slide__page">13 / 18</span>
+        <div class="slide__head" data-anim="1">
+            <div>
+                <span class="eyebrow">Sala V · Modelo de contenido</span>
+                <h2>El reparto que<br>busca <em>movilizar</em>.</h2>
+            </div>
+            <div class="slide__head-side">
+                Un calendario editorial donde <strong>siete de cada diez</strong> piezas son storytelling humano. La conversión llega <strong>solo cuando ya hay vínculo</strong>.
+            </div>
+        </div>
+
+        <div class="mix__body">
+            <div class="mix__chart" data-anim="2">
+                <svg viewBox="-60 -60 320 320">
+                    <!-- Pista de fondo -->
+                    <circle cx="100" cy="100" r="80" fill="none" stroke="#F3F5F9" stroke-width="48" />
+                    <!-- Storytelling 70% -->
+                    <circle id="arc-story" class="mix__chart-circle" cx="100" cy="100" r="80"
+                            stroke="#0F2C52"
+                            stroke-width="48" fill="none"
+                            stroke-dasharray="502.65" stroke-dashoffset="502.65"
+                            data-target="150.79"
+                            transform="rotate(-90 100 100)" />
+                    <!-- Impacto 20% (rotado tras 70%) -->
+                    <circle id="arc-impact" class="mix__chart-circle" cx="100" cy="100" r="80"
+                            stroke="#F4C430"
+                            stroke-width="48" fill="none"
+                            stroke-dasharray="502.65" stroke-dashoffset="502.65"
+                            data-target="402.12"
+                            transform="rotate(162 100 100)" />
+                    <!-- Conversión 10% -->
+                    <circle id="arc-conv" class="mix__chart-circle" cx="100" cy="100" r="80"
+                            stroke="#6F8E8A"
+                            stroke-width="48" fill="none"
+                            stroke-dasharray="502.65" stroke-dashoffset="502.65"
+                            data-target="452.39"
+                            transform="rotate(234 100 100)" />
+
+                    <!-- Etiqueta storytelling (centro arc) -->
+                    <g class="mix__callout">
+                        <line x1="100" y1="100" x2="-30" y2="20" stroke-width="0" />
+                        <text x="-46" y="14" class="mix__callout-pct">70%</text>
+                        <text x="-46" y="36" class="mix__callout-lab">Storytelling</text>
+                    </g>
+                    <!-- Etiqueta impacto -->
+                    <g class="mix__callout">
+                        <text x="246" y="14" class="mix__callout-pct" text-anchor="end">20%</text>
+                        <text x="246" y="36" class="mix__callout-lab" text-anchor="end">Impacto</text>
+                    </g>
+                    <!-- Etiqueta conversión -->
+                    <g class="mix__callout">
+                        <text x="240" y="190" class="mix__callout-pct" text-anchor="end" style="fill:#3F6260;">10%</text>
+                        <text x="240" y="212" class="mix__callout-lab" text-anchor="end">Conversión</text>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="mix__legend">
+                <div class="mix__row" data-anim="3">
+                    <span class="mix__row-dot" style="background:#0F2C52;"></span>
+                    <div class="mix__row-body">
+                        <h4>Storytelling</h4>
+                        <p>Vídeos testimoniales, micro-historias del barrio, días en la vida de…</p>
+                    </div>
+                    <span class="mix__row-pct">70%</span>
+                </div>
+                <div class="mix__row" data-anim="4">
+                    <span class="mix__row-dot" style="background:#F4C430;"></span>
+                    <div class="mix__row-body">
+                        <h4>Impacto · credibilidad</h4>
+                        <p>Behind the scenes, gráficos semanales, micro-entrevistas al equipo técnico.</p>
+                    </div>
+                    <span class="mix__row-pct">20%</span>
+                </div>
+                <div class="mix__row" data-anim="5">
+                    <span class="mix__row-dot" style="background:#6F8E8A;"></span>
+                    <div class="mix__row-body">
+                        <h4>Conversión · acción</h4>
+                        <p>Vídeos clave con CTA: dona, hazte voluntario, comparte para amplificar.</p>
+                    </div>
+                    <span class="mix__row-pct">10%</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SLIDE 13 — GIRO NARRATIVO
+         ==================================================== -->
+    <section class="slide shift slide--white" data-slide="14" data-title="Giro narrativo">
+        <span class="slide__page">14 / 18</span>
+        <div class="slide__head" data-anim="1">
+            <div>
+                <span class="eyebrow">Sala V · Giro narrativo</span>
+                <h2>De <em>registrar actividades</em><br>a <em>movilizar causas</em>.</h2>
+            </div>
+            <div class="slide__head-side">
+                El cambio no es de canales, es de relato. Pasar de <strong>«mostrar lo que hacemos»</strong> a <strong>«hacer sentir por qué lo hacemos»</strong>.
+            </div>
+        </div>
+
+        <div class="shift__body">
+            <div class="shift__panel shift__panel--from" data-anim="2">
+                <span class="shift__tag"><span style="width:8px;height:8px;border-radius:50%;background:currentColor;display:inline-block;"></span> Antes</span>
+                <h3 class="shift__title">«Actividad de refuerzo escolar realizada hoy.»</h3>
+                <p>Foto de grupo en el aula. Pie informativo. Cero hooks. Cero rostros con nombre. Cero motivación para compartir.</p>
+                <div class="shift__example">
+                    <span class="shift__example-label">Tipo de pieza</span>
+                    Acta visual sin protagonista
+                </div>
+            </div>
+
+            <div class="shift__arrow" data-anim="3">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M5 12h14M13 5l7 7-7 7"/>
+                </svg>
+            </div>
+
+            <div class="shift__panel shift__panel--to" data-anim="4">
+                <span class="shift__tag"><span style="width:8px;height:8px;border-radius:50%;background:currentColor;display:inline-block;"></span> Después</span>
+                <h3 class="shift__title">«María, 15, <em>volvió a creer</em> que puede terminar la escuela.»</h3>
+                <p>Una historia con nombre, edad y tiempo verbal. Vídeo orgánico cercano. Estructura: gancho, transformación, CTA.</p>
+                <div class="shift__example">
+                    <span class="shift__example-label">Tipo de pieza</span>
+                    Micro-historia movilizadora
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SLIDE 14 — MOCKUPS REALES (post + stories + reel)
+         ==================================================== -->
+    <section class="slide mocks slide--cream" data-slide="15" data-title="Prototipos de pieza">
+        <span class="slide__page">15 / 18</span>
+        <div class="slide__head" data-anim="1">
+            <div>
+                <span class="eyebrow">Sala V · Prototipos reales</span>
+                <h2>Una misma historia,<br><em>tres formatos</em>.</h2>
+            </div>
+            <div class="slide__head-side">
+                <strong>María, 12 años.</strong> Refuerzo educativo. Volvió a creer que puede terminar la escuela. La misma historia narrada en <strong>post de feed, secuencia de stories y reel de 30 segundos</strong>.
+            </div>
+        </div>
+
+        <div class="mocks__grid">
+            <!-- POST IG -->
+            <figure class="mock-piece mock-piece--post" data-anim="2">
+                <span class="mock-piece-tag">Post · feed IG</span>
+                <div class="mock-piece-frame mock-piece-frame--post">
+                    <img src="assets/img/post-feed.png" alt="Post de Instagram: Volvió a creer en su futuro · María, 12 años" loading="lazy" />
+                </div>
+                <figcaption class="mock-piece-cap">
+                    <strong>Post de feed</strong> · imagen + copy largo. Pieza ancla del calendario editorial.
+                </figcaption>
+            </figure>
+
+            <!-- STORIES -->
+            <figure class="mock-piece mock-piece--stories" data-anim="3">
+                <span class="mock-piece-tag">Stories · secuencia</span>
+                <div class="mock-piece-stories">
+                    <div class="mock-piece-frame mock-piece-frame--story">
+                        <img src="assets/img/story-1.png" alt="Story 1: gancho emocional" loading="lazy" />
+                    </div>
+                    <div class="mock-piece-frame mock-piece-frame--story">
+                        <img src="assets/img/story-2.png" alt="Story 2: dato de impacto" loading="lazy" />
+                    </div>
+                    <div class="mock-piece-frame mock-piece-frame--story">
+                        <img src="assets/img/story-3.png" alt="Story 3: llamada a la acción" loading="lazy" />
+                    </div>
+                </div>
+                <figcaption class="mock-piece-cap mock-piece-cap--3">
+                    <span><span class="mock-piece-cap-step">01</span><strong>Gancho</strong><br>«Esto pasa todos los días en Polígono Norte…»</span>
+                    <span><span class="mock-piece-cap-step">02</span><strong>Dato</strong><br>+70 niños reciben apoyo educativo cada semana</span>
+                    <span><span class="mock-piece-cap-step">03</span><strong>CTA</strong><br>«Tú puedes ayudar a que esto continúe» · Donar</span>
+                </figcaption>
+            </figure>
+        </div>
+
+        <!-- REEL · guion abajo, full width -->
+        <article class="mock-reel-strip" data-anim="4">
+            <header class="mock-reel-strip__head">
+                <span class="mock-piece-tag">Reel · 30 seg</span>
+                <span class="mock-reel-strip__sub">Mismo storytelling adaptado a vídeo orgánico, formato vertical para feed y reels.</span>
+            </header>
+            <div class="mock-reel-strip__scenes">
+                <div class="mock-reel-strip__scene">
+                    <span class="mock-reel-strip__scene-time">0 — 3 s</span>
+                    <strong>Esto cambia vidas</strong>
+                    <span>Niño entrando al centro</span>
+                </div>
+                <div class="mock-reel-strip__scene">
+                    <span class="mock-reel-strip__scene-time">3 — 15 s</span>
+                    <strong>Acompañamos cada día</strong>
+                    <span>Clips de actividades, refuerzo, talleres</span>
+                </div>
+                <div class="mock-reel-strip__scene">
+                    <span class="mock-reel-strip__scene-time">15 — 25 s</span>
+                    <strong>«Aquí aprendí que sí puedo»</strong>
+                    <span>Testimonio breve a cámara</span>
+                </div>
+                <div class="mock-reel-strip__scene">
+                    <span class="mock-reel-strip__scene-time">25 — 30 s</span>
+                    <strong>Con tu ayuda llegamos a más</strong>
+                    <span>Logo + CTA «Hazte voluntario»</span>
+                </div>
+            </div>
+        </article>
+    </section>
+
+    <!-- ====================================================
+         SLIDE 16 — ECOSISTEMA + ROADMAP
+         ==================================================== -->
+    <section class="slide eco slide--white" data-slide="16" data-title="Ecosistema digital">
+        <span class="slide__page">16 / 18</span>
+        <div class="sala-head" data-anim="1">
+            <span class="sala-num">Sala VI</span>
+            <span class="sala-div"></span>
+            <span class="sala-label">Ecosistema digital y roadmap</span>
+        </div>
+
+        <div class="eco__channels">
+            <article class="eco-ch eco-ch--primary" data-anim="2">
+                <div class="eco-ch__head">
+                    <div class="eco-ch__icon">IG</div>
+                    <span class="eco-ch__name">Instagram</span>
+                </div>
+                <span class="eco-ch__role">Canal principal</span>
+                <p>Reels, storytelling y carruseles. Primer punto de contacto.</p>
+                <div class="eco-ch__pulse" aria-label="Intensidad de uso: alta" data-bars="6,8,10,12,14,12,10,12,14,16">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <span class="eco-ch__freq">Diario · 5–7 piezas/sem</span>
+            </article>
+            <article class="eco-ch" data-anim="2">
+                <div class="eco-ch__head">
+                    <div class="eco-ch__icon">FB</div>
+                    <span class="eco-ch__name">Facebook</span>
+                </div>
+                <span class="eco-ch__role">Comunidad local</span>
+                <p>Difusión a familias y socios del barrio.</p>
+                <div class="eco-ch__pulse" aria-label="Intensidad media">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <span class="eco-ch__freq">2–3 piezas/sem</span>
+            </article>
+            <article class="eco-ch" data-anim="3">
+                <div class="eco-ch__head">
+                    <div class="eco-ch__icon">in</div>
+                    <span class="eco-ch__name">LinkedIn</span>
+                </div>
+                <span class="eco-ch__role">Alianzas</span>
+                <p>Empresas, financiadores y voluntariado cualificado.</p>
+                <div class="eco-ch__pulse eco-ch__pulse--low" aria-label="Intensidad baja">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <span class="eco-ch__freq">1 pieza/sem</span>
+            </article>
+            <article class="eco-ch" data-anim="3">
+                <div class="eco-ch__head">
+                    <div class="eco-ch__icon">YT</div>
+                    <span class="eco-ch__name">YouTube</span>
+                </div>
+                <span class="eco-ch__role">Profundidad</span>
+                <p>Mini-documentales y archivo audiovisual.</p>
+                <div class="eco-ch__pulse eco-ch__pulse--low" aria-label="Intensidad baja">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <span class="eco-ch__freq">1 pieza/mes</span>
+            </article>
+            <article class="eco-ch eco-ch--explore" data-anim="4">
+                <div class="eco-ch__head">
+                    <div class="eco-ch__icon">TT</div>
+                    <span class="eco-ch__name">TikTok</span>
+                </div>
+                <span class="eco-ch__role">Exploración</span>
+                <p>Contenido espontáneo, día a día del centro.</p>
+                <div class="eco-ch__pulse eco-ch__pulse--lab" aria-label="En exploración">
+                    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+                </div>
+                <span class="eco-ch__freq">Fase de prueba</span>
+            </article>
+        </div>
+
+        <div class="eco__roadmap" data-anim="5">
+            <div class="eco__roadmap-head">
+                <span class="eyebrow">Roadmap · 3 meses</span>
+                <h3>Cómo llegar de <em>aquí</em> a allí.</h3>
+                <p>El primer trimestre de implementación.</p>
+            </div>
+            <div class="eco__steps">
+                <div class="eco__step">
+                    <div class="eco__step-time">Mes 1 · sentar bases</div>
+                    <h4>Definición</h4>
+                    <ul>
+                        <li>Narrativa y visual definidos</li>
+                        <li>Capacitación en vídeo móvil</li>
+                        <li>Optimización básica de la web</li>
+                    </ul>
+                </div>
+                <div class="eco__step">
+                    <div class="eco__step-time">Mes 2 · ritmo</div>
+                    <h4>Activación</h4>
+                    <ul>
+                        <li>Inicio del calendario editorial</li>
+                        <li>Publicación sostenida de vídeos</li>
+                        <li>Lanzamiento de newsletter</li>
+                    </ul>
+                </div>
+                <div class="eco__step">
+                    <div class="eco__step-time">Mes 3 · escala</div>
+                    <h4>Profundidad</h4>
+                    <ul>
+                        <li>Producción de historias más elaboradas</li>
+                        <li>Apertura LinkedIn / YouTube</li>
+                        <li>Campañas de captación</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SLIDE 17 — LAB DE COMUNICACIÓN SOCIAL
+         ==================================================== -->
+    <section class="slide lab" data-slide="17" data-title="Laboratorio de Comunicación Social">
+        <span class="slide__page">17 / 18</span>
+        <div class="sala-head" data-anim="1">
+            <span class="sala-num">Sala VI</span>
+            <span class="sala-div"></span>
+            <span class="sala-label">Propuesta · Laboratorio de Comunicación Social</span>
+        </div>
+
+        <div class="lab__body">
+            <div class="lab__copy" data-anim="2">
+                <span class="eyebrow">¿Quién lo ejecuta?</span>
+                <h2 style="margin-top:18px;">Un <em>laboratorio</em> de prácticas formativas en alianza con la US.</h2>
+                <p>Manos Abiertas con Norte no cuenta hoy con un equipo de comunicación. Por eso proponemos un <strong>Laboratorio de Comunicación Social</strong> en alianza con la Universidad de Sevilla, donde estudiantes de comunicación participen activamente en la implementación de la estrategia digital.</p>
+
+                <div class="lab__alliance">
+                    <div class="lab__alliance-mark">US</div>
+                    <div class="lab__alliance-text">
+                        <strong>Universidad de Sevilla</strong>
+                        <small>Convenio de prácticas curriculares · Periodismo, Comunicación Audiovisual, Publicidad y RR.PP., Diseño</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lab__panel" data-anim="3">
+                <div class="lab__panel-section">
+                    <h4>Objetivos específicos</h4>
+                    <ul class="lab__panel-list">
+                        <li>Implementar estrategia de contenidos</li>
+                        <li>Incrementar producción audiovisual</li>
+                        <li>Mejorar coherencia en redes</li>
+                        <li>Apoyar campañas de captación</li>
+                        <li>Generar espacio de aprendizaje</li>
+                        <li>Documentar para futuras tandas</li>
+                    </ul>
+                </div>
+                <div class="lab__panel-section">
+                    <h4>Funciones</h4>
+                    <ul class="lab__panel-list">
+                        <li>Producción de vídeos · reels, testimonios</li>
+                        <li>Gestión diaria de redes sociales</li>
+                        <li>Calendario editorial compartido</li>
+                        <li>Cobertura de actividades del centro</li>
+                        <li>Apoyo en campañas digitales</li>
+                        <li>Monitoreo básico de KPIs</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ====================================================
+         SLIDE 18 — CIERRE
+         ==================================================== -->
+    <section class="slide end slide--dark" data-slide="18" data-title="Cierre">
+        <div class="end__copy">
+            <span class="eyebrow" data-anim="1">Lab de Comunicación e Innovación</span>
+            <h2 class="end__title" data-anim="2">Gracias.<br><em>El barrio se cuenta.</em></h2>
+            <p class="end__lead" data-anim="3">Si esta presentación moviliza, deja huella o dispara preguntas, ya valió la pena. Las respuestas, las construimos juntos.</p>
+
+            <div class="end__sign" data-anim="4">
+                <span class="end__sign-label">Equipo</span>
+                <span>Agustina Vallena</span>
+                <span>Lucas Gorodneff</span>
+                <span>Karelyn Salvador</span>
+                <span>Nolan Bueno</span>
+            </div>
+        </div>
+
+        <div class="end__qr" data-anim="3">
+            <div class="end__qr-canvas" id="qr-end" data-loading="true"></div>
+            <p class="end__qr-text">Hacé el <em>quiz</em> y entrá a la landing.</p>
+            <p class="end__qr-sub">lucasgorod.github.io/manos-abiertas-lab/quiz.html</p>
+        </div>
+    </section>
+
+</div>
+</div>
+
+<!-- HUD inferior · navegación -->
+<nav class="hud" aria-label="Controles de presentación">
+    <button class="hud__btn" id="prev-btn" aria-label="Slide anterior" disabled>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+    </button>
+    <span class="hud__counter">
+        <strong id="hud-current">01</strong> / <span id="hud-total">18</span>
+    </span>
+    <button class="hud__btn" id="next-btn" aria-label="Slide siguiente">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </button>
+    <button class="hud__btn" id="fs-btn" aria-label="Pantalla completa" style="margin-left:8px;">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M3 9V3h6M21 9V3h-6M3 15v6h6M21 15v6h-6"/></svg>
+    </button>
+</nav>
+
+<!-- Hint de teclado -->
+<div class="hint" id="hint">
+    Usa las flechas <kbd>←</kbd><kbd>→</kbd> para navegar · <kbd>F</kbd> pantalla completa
+</div>
+
+<!-- Menú overlay (índice navegable) -->
+<div class="menu" id="menu">
+    <div class="menu__panel">
+        <header class="menu__head">
+            <h3>Índice <em>de la presentación</em></h3>
+            <button class="menu__close" id="menu-close" aria-label="Cerrar índice">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+            </button>
+        </header>
+        <div class="menu__list" id="menu-list">
+            <!-- inyectado por JS -->
+        </div>
+    </div>
+</div>
+
+<!-- Librerías -->
+<script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14/dist/gsap.min.js" defer></script>
+<script src="assets/js/presentacion.js?v=6" defer></script>
+</body>
+</html>
