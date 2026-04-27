@@ -224,7 +224,7 @@
         LEJOS: {
             tag: 'Honesto: tu camino va por otro lado',
             title: 'Igual queríamos <em>contártelo</em>.',
-            lead: 'Lo que hacemos en el Polígono Norte no es para todo el mundo, y eso está bien. Pero si conocés a alguien que esto le pueda hacer click, o si querés seguir nuestro trabajo desde lejos, también nos suma.',
+            lead: 'Lo que hacemos en el Polígono Norte no es para todo el mundo, y eso está bien. Pero si conoces a alguien al que esto le pueda hacer click, o si quieres seguir nuestro trabajo desde lejos, también nos suma.',
             cardLabel: 'Tu mejor encaje',
             actions: [
                 {

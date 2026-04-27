@@ -56,13 +56,13 @@
             el.classList.toggle('is-active', i === idx);
         });
 
-        // Hooks específicos (números de slide actualizados tras reorganización)
+        // Hooks específicos (números de slide para 19 slides totales)
         if (slides[idx].dataset.slide === '2') ensureQR('qr-landing', 'https://lucasgorod.github.io/manos-abiertas-lab/quiz.html', 380);
         if (slides[idx].dataset.slide === '8') animateBars(slides[idx]);
         if (slides[idx].dataset.slide === '9') animateScorecard(slides[idx]);
         if (slides[idx].dataset.slide === '10') animateFunnel(slides[idx]);
         if (slides[idx].dataset.slide === '13') animateMix();
-        if (slides[idx].dataset.slide === '18') ensureQR('qr-end', 'https://lucasgorod.github.io/manos-abiertas-lab/quiz.html', 320);
+        if (slides[idx].dataset.slide === '19') ensureQR('qr-end', 'https://lucasgorod.github.io/manos-abiertas-lab/quiz.html', 320);
 
         // Persistencia ligera en URL hash
         history.replaceState(null, '', `#slide-${idx + 1}`);
