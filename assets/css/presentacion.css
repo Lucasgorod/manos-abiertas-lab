@@ -431,9 +431,7 @@ p.lead {
 }
 .tdc__head {
     grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    gap: 32px;
+    display: flex;
     align-items: end;
     padding-bottom: 16px;
     border-bottom: 1px solid var(--c-linea);
