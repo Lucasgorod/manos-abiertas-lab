@@ -214,7 +214,7 @@
                     const t = Math.min((now - start - 300) / dur, 1);
                     if (t < 0) return requestAnimationFrame(step);
                     const eased = 1 - Math.pow(1 - t, 3);
-                    el.textContent = (target * eased).toFixed(decimals);
+                    el.textContent = (target * eased).toFixed(decimals).replace('.', ',');
                     if (t < 1) requestAnimationFrame(step);
                 });
             }, 300 + i * 200);
